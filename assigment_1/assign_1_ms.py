@@ -48,7 +48,7 @@ def main():
     while True:
         print(f"You have ${balance}")
         bet = check_input.get_int_range("How much you wanna bet? ", 1, balance)
-        draw_cards(range(1, NUM_CARDS + 1), selected=0)
+        draw_cards(range(1, NUM_CARDS + 1))
         queen = random.randint(1, NUM_CARDS)
         guess = check_input.get_int_range("Find the queen: ", 1, NUM_CARDS)
         draw_cards(["K" if i != queen else "Q" for i in range(1, NUM_CARDS + 1)])
