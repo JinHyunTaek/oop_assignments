@@ -13,6 +13,7 @@ BOLD = "\033[1m"
 
 
 def draw_greeting():
+    """Draw a greeting message."""
     txt = """  _______   _                               _____                      _     __  __                   _          
  |__   __| | |                             / ____|                    | |   |  \\/  |                 | |         
     | |    | |__    _ __    ___    ___    | |        __ _   _ __    __| |   | \\  / |   ___    _ __   | |_    ___ 
@@ -25,6 +26,12 @@ def draw_greeting():
 
 
 def draw_cards(cards: list[str] | list[int]):
+    """Draw the cards on the screen.
+    Args:
+        cards (list[str] | list[int]): List of cards to draw.\n
+        - if the card is a string, only the first character will be drawn.
+        - If the card is an integer, it will be converted to a string and only the first digit will be show.
+    """
     cards = [str(card)[0] for card in cards]
     txt = ("+-----+ " * len(cards))[:-1] + "\n"
     txt += ("|     | " * len(cards))[:-1] + "\n"
