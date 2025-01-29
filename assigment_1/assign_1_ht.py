@@ -1,4 +1,8 @@
-import check_input
+# Maxime SENARD , Hyuntaek Jin
+# 01/27/2025
+# A program that allows the user to play the game Three Card Monte, where a player bets that they can guess the location of the queen in a set of three cards.
+
+import check_input as check_input
 import random
 
 ci = check_input
